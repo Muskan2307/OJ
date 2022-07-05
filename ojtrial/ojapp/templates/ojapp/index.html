@@ -1,0 +1,15 @@
+<h1>Welcome to my_code_platform</h1>
+<h3>Hello, coders!! You are at the right place!</h3>
+<h3>You can start solving the problems by clicking on the respective problem</h3>
+<h3>All the Best for your coding journey ahead :) </h3>
+<br>
+<h4>Problems you can try to solve !!</h4>
+{% if all_problems %}
+    <ul>
+    {% for p in all_problems %}
+        <li><a href="/ojapp/{{ p.id }}/">{{ p.Name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No problem is available.</p>
+{% endif %}
